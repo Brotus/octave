@@ -6,3 +6,7 @@
 function [ci,xi] = compute_newton_poly (xi,yi)
   [ci,xi]=[divdiff(xi,yi),xi];
 endfunction
+
+% Komplexität: Ist n die Länge der Eingabevektoren, so werden so viele Operationen benötigt, wie divdiff
+% benötigt.  Nach dem Skript S. 26 (unten) sind dies
+% #(ops) = O(n^2)
