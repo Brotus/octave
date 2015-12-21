@@ -1,3 +1,10 @@
+
+% Komplexitaet:
+% Sei n die Laenge von ci und m die Laenge von x. Zaehlt man nur Multiplikationen und Divisionen,
+% so betraegt die Komplexitaet in der Eingabe
+% #(ops) = O(1)+m*n*(O(1)+O(n)+O(1)) = O(m*n^2).
+
+
 x = [0:0.1:5];
 x2= [0,5];
 ci1=[1];ci2=[1,2];ci3=[1,3,4];

@@ -4,7 +4,13 @@
 % Indizierung: x(1)=x0, x(2)=x1, usw
 
 function [ci,xi] = compute_newton_poly (xi,yi)
-  ci=divdiff(xi,yi);
+  m=length(xi);
+  ci=yi;
+  for i=1:m-1
+    for j=m:-1:i+1
+      ci(j)=(ci(j)-ci(j-1))/(xi(j)-xi(j-i));
+    end
+  end
 endfunction
 
 % Komplexität: Ist n die Länge der Eingabevektoren, so werden so viele Operationen benötigt, wie divdiff
