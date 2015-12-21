@@ -26,8 +26,8 @@ p3=@(x) 4*x*2-x+1;
 
 % Erzeuge ein Plotfenster mit 3 subplots.
 subplot (3, 1, 1)
-plot(x,y1,a1,b1)
+plot(x,y1,"--r",a1,b1,":b")
 subplot (3, 1, 2)
-plot(x,y2,a2,b2)
+plot(x,y2,"--r",a2,b2,":b")
 subplot (3, 1, 3)
-plot(x,y3,a3,b3)
+plot(x,y3,"--r",a3,b3,":b")
