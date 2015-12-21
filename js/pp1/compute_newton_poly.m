@@ -1,10 +1,10 @@
-% Eingabe: x...Stutzstellen   [x0,x1,...,xn]
-%          y...Stutzwerte     [y0,y1,...,yn]
+% Eingabe: x...Stützstellen   [x0,x1,...,xn]
+%          y...Stützwerte     [y0,y1,...,yn]
 % Ausgabe: c...Koeffizienten  [c0,c1,...,cn]
 % Indizierung: x(1)=x0, x(2)=x1, usw
 
 function [ci,xi] = compute_newton_poly (xi,yi)
-  [ci,xi]=[divdiff(xi,yi),xi];
+  ci=divdiff(xi,yi);
 endfunction
 
 % Komplexität: Ist n die Länge der Eingabevektoren, so werden so viele Operationen benötigt, wie divdiff
