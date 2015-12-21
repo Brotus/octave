@@ -1,7 +1,8 @@
-% Eingabe: x...Stützstellen   [x0,x1,...,xn]
-%          y...Stützwerte     [y0,y1,...,yn]
-% Ausgabe: c...Koeffizienten  [c0,c1,...,cn]
-% Indizierung: x(1)=x0, x(2)=x1, usw
+% Berechnet die Koeffizienten des Newtonpolynoms bei gegebenen Stuetzstellen und Stuetzwerten.
+% Eingabe: xi sind die Stuetzstellen   [x0,x1,...,xn]
+%          yi sind die Stuetzwerte     [y0,y1,...,yn]
+% Ausgabe: ci sind die Koeffizienten   [c0,c1,...,cn]
+%          xi sind erneut die Stuetzstellen
 
 function [ci,xi] = compute_newton_poly (xi,yi)
   m=length(xi);
@@ -12,7 +13,3 @@ function [ci,xi] = compute_newton_poly (xi,yi)
     end
   end
 endfunction
-
-% Komplexität: Ist n die Länge der Eingabevektoren, so werden so viele Operationen benötigt, wie divdiff
-% benötigt.  Nach dem Skript S. 26 (unten) sind dies
-% #(ops) = O(n^2)
