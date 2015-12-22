@@ -1,0 +1,11 @@
+pp1:
+  Aufgabe P3
+  Aufgabe P6
+
+pp2:
+  Aufgabe P1
+    Korrekte Berechnung von Quadraturfehler
+    schöne Tabelle
+    eoc
+  Aufgabe P2
+    zweite Hälfte
