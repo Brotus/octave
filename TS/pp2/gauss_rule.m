@@ -1,0 +1,1 @@
+function a = gauss_rule(n)
