@@ -10,6 +10,7 @@ i = 0:n;
 for l = j
   x(l,:) = i.*h(l);
 endfor
+x
 
 % Funktionswerte berechnen
 y=f(x);
@@ -28,6 +29,8 @@ for l = j;
   G = 0:h(l)/10:n*h(l);
   % die Funktionswerte beim Gitter
   fG = f(G);
+  % die Newton Koeffizienten berechnen
+  [ci,xi] = compute_newton_poly(x(l,:),y(l,:));
   % die Approximierten Werte beim Gitter
   fGA = eval_newton_poly(ci,xi,G);
   % der maximale Fehler
@@ -59,14 +62,12 @@ for p = 2:5
     x(l,:) = i.*h(l);
   endfor
   y=f(x);
-  for l = j
-    [ci,xi] = compute_newton_poly(x(l,:),y(l,:));
-  endfor
   % Fehlerberechnung
   e_h = j';
   for l = j;
     G = 0:h(l)/10:n*h(l);
     fG = f(G);
+	[ci,xi] = compute_newton_poly(x(l,:),y(l,:));
     fGA = eval_newton_poly(ci,xi,G);
     e_h(l) = norm(fG-fGA, inf);
   endfor
