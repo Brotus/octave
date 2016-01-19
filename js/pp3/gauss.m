@@ -20,7 +20,7 @@ function [R,y]=gauss(A,b)
       %for k=j:n
       %  tmp = A(i,k); A(i,k)=A(j,k); A(j,k)=tmp;
       %endfor
-	  tmp = A(i,:); A(i,:)=A(j,:); A(j,:)=tmp;                                                      
+      tmp = A(i,:); A(i,:)=A(j,:); A(j,:)=tmp;                                                      
       if(~bool)
         counter = counter + 1;
       endif
