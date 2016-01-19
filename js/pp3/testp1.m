@@ -15,7 +15,7 @@ y
 % Teilaufgabe (b)
 'Teilaufgabe (b)'
 A=[0,1;1,1]; b=[1:10;2:11];
-%[R,y]=gauss(A,b)
+[R,y]=gauss(A,b)
 % korrektes Ergebnis
 
 [R,y]=gauss(A,[]);
@@ -27,7 +27,7 @@ y
 'Teilaufgabe (c)'
 A=-ones(10)+11*eye(10)
 b=[1:10]'
-%[R,y]=gauss(A,b)
+[R,y]=gauss(A,b)
 % korrektes Ergebnis
 
 [R,y]=gauss(A,[]);
