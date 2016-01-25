@@ -8,6 +8,5 @@ function r = eval_monom_poly(ai,x)
     r(j) = ai(n+1);
     for i = n:-1:1
       r(j)=ai(i)+x(j)*r(j);
-    endfor
-  endfor
-endfunction
+    end
+  end

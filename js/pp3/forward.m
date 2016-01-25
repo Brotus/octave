@@ -13,8 +13,7 @@ function x = forward (R, y)
       x(n-j,:)
       y(i,:)=y(i,:)-R(i,j).*x(n-j+1,:);
       y
-    endfor
+    end
     x(i,:)=y(i,:)/R(i,n-i+1);
     x
-  endfor
-endfunction
+  end

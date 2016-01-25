@@ -17,7 +17,6 @@ function m = determine_exactness_order (ti,wi)
       break;
     else
       m = m + 1;
-    endif
-  endwhile
+    end
+  end
   m = m - 1;
-endfunction

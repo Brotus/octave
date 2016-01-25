@@ -4,5 +4,5 @@ function y = evalPP (s, x)
     for i=1:n
       if x(l)<x(i+1), break;
     end
-    y(l)=horner(aij(aij(i,:),x(l)-xi(i)));
+    y(l)=horner(aij(i,:),x(l)-xi(i));
   end

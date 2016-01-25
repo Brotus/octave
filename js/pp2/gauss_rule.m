@@ -46,5 +46,3 @@ ti=(a*(1-y)+b*(1+y))/2;
 
 % Compute the weights
 wi=((b-a)./((1-y.^2).*Lp.^2)*(n2/n1)^2)./2;
-
-endfunction

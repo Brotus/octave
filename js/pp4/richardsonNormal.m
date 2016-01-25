@@ -14,8 +14,7 @@ function [z,res]=richardsonNormal(A,b,tol,maxit,omega)
     resk=norm(r);
     if(resk<tol*res0)
       break;
-    endif
+    end
     res=[res, resk]; % aufwaending aber wir koennen es uns leisten
     z=z+omega.*r;
-  endfor    
-endfunction
+  end

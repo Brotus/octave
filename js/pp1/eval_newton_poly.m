@@ -15,17 +15,16 @@ function r = eval_newton_poly (ci,xi,x)
   n = length(ci);
   if (n == 1)
     return;
-  endif
+  end
   if (length(xi) >= n)
     xi = xi(1:(n-1));
-  endif
+  end
   for i = 1:m
     for j = 2:n
       a = ci(j);
       for k = 2:j
         a = a * (x(i) - xi(k-1));
-      endfor
+      end
       r(i) = r(i) + a;
-    endfor
-  endfor
-endfunction
+    end
+  end

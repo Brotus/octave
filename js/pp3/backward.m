@@ -8,7 +8,6 @@ function x = backward (R, y)
   for i = n:-1:1
     for j = i+1:n
       y(i,:)=y(i,:)-R(i,j).*x(j,:);
-    endfor
+    end
     x(i,:)=y(i,:)/R(i,i);
-  endfor
-endfunction
+  end

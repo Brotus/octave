@@ -6,13 +6,12 @@ function [L,D] = cholesky (A)
       for j=1:k-1
         dlj(k,j)=D(j,j)*L(k,j);
         A(i,k)=A(i,k)-L(i,j)*dlj(k,j);
-      endfor
+      end
       L(i,k)=A(i,k)/D(k,k);
-    endfor
+    end
     % Berechnung von D(k,k)
     for j=1:k-1
       A(k,k)=A(k,k)-L(k,j)*dlj(k,j);
-    endfor
+    end
     D(k,k)=A(k,k);
-  endfor
-endfunction
+  end

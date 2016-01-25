@@ -17,4 +17,3 @@ function [x,xk]=bisection(f,a,b,tol)
       a=c; fa=fc;
     end
   end
-endfunction

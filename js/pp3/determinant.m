@@ -3,5 +3,4 @@ function d = determinant (A)
   d=y;
   for i=1:length(A)
     d = d * R(i,i);
-  endfor
-endfunction
+  end
