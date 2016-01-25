@@ -6,6 +6,8 @@ function y = evalPP (s, x)
     for i=1:n
       if x(l)<X(i+1), break;
     end
+    % -X(i-1) ... nein X(i) ist korrekt
     y(l)=polyval(A(i,:),x(l)-X(i));
     %y(l)=horner(A(i,:),x(l)-X(i));
   end
+end
