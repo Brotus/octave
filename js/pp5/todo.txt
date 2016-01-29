@@ -1,1 +1,2 @@
 testp1 c konvergenzaussage überdenken
+newton fix
