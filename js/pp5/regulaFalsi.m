@@ -4,7 +4,7 @@ function [x,xk] = regulaFalsi (f,a,b,tol,maxit)
     fa=f(a); fb=f(b);
     c=(a*f(b)-b*f(a))/(f(b)-f(a));
     fc=f(c);
-    xk=[xk,c];
+    xk=[xk;c];
     if norm(fc)<tol
       x=c;
       break;

@@ -7,7 +7,7 @@ function [x,xk]=bisection(f,a,b,tol)
   fa=f(a); fb=f(b); xk=[];
   while 1
     c=(a+b)/2; fc=f(c);
-    xk=[xk,c];
+    xk=[xk;c];
     if abs(b-a)<=tol
       break;
     end
