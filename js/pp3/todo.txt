@@ -1,2 +1,2 @@
-fix cholesky.m
-fix forward
+fix cholesky
+run tests
