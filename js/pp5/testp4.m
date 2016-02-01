@@ -4,7 +4,7 @@ phi=@(x) [(cos(x(1))+x(2))/6;(x(1)*x(2)^2+sin(x(1)))/8];
 maxit=8;
 [x,xk]=banach(phi,x0,tol,maxit);
 
-xsol=[0.171333648176476,0.021321814151372] % laut WolframAlpha
+xsol=[0.171333648176476,0.021321814151372]; % laut WolframAlpha
 xsol2=[0.1739;0.0217]; % laut des Skriptes
 
 n=size(xk,2);
