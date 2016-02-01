@@ -1,5 +1,5 @@
 function [x,xk]=gaussNewton(F,DF,x0,tol,maxit)
-  xk=[];
+  xk=x0;
   w=1; % omega wird nicht als parameter übergeben...
   for k=1:maxit
     dfx0=DF(x0);
