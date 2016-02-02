@@ -1,8 +1,10 @@
 function [ti,wi] = gauss_rule (n)
-%http://www.mathworks.com/matlabcentral/fileexchange/4540-legendre-gauss-quadrature-weights-and-nodes/content/lgwt.m
+% Source:
+% http://www.mathworks.com/matlabcentral/fileexchange/4540-legendre-gauss-quadrature-weights-and-nodes/content/lgwt.m
 
+% linke und rechte Intervallgrenze
 a = -1; b = 1;
-%n=n-1;
+% n=n-1;
 n1=n+1; n2=n+2;
 
 xu=linspace(-1,1,n1)';
