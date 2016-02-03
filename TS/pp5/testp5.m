@@ -1,3 +1,4 @@
+astar = 0.504752049128897;
 F = @(a) [2*a + sqrt(a^2+0.04) - 1.55; 2*a + sqrt(a^2+0.16) - 1.65; 2*a + sqrt(a^2+0.36) - 1.8];
 DF = @(a) [2 + a*(a^2+0.04)^(-1/2); 2 + a*(a^2+0.16)^(-1/2); 2 + a*(a^2+0.36)^(-1/2)];
 x0 = 1;
@@ -7,7 +8,7 @@ tol = 10^-10; % Analog zu den anderen Tests
 
 err=[];
 for i=1:length(ak)
-  err(i) = norm(a - ak(i));
+  err(i) = norm(astar - ak(i));
 end
 format short e
 Table = [[1:length(ak)].', err.']
@@ -16,5 +17,5 @@ format short
 
 f = @(x) (2*x+sqrt(x.^2+0.04) - 1.55).^2 + (2*x+sqrt(x.^2+0.16) - 1.65).^2 + (2*x+sqrt(x.^2+0.36) - 1.8).^2;
 x = [0:0.01:1];
-plot(ak(1:5),ak(2:6),'r',x,f(x),'ob')
+plot(ak(1:5),ak(2:6),'or',x,f(x),'b')
 legend('f(a_k)', 'f(x)', "Location", 'northwest')
