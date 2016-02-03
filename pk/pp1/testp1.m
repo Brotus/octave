@@ -41,8 +41,10 @@ plot(plot5, x, rc, "r")
 plot(plot2, x, pa(x), "b")
 plot(plot4, x, pb(x), "b")
 plot(plot6, x, pc(x), "b")
-title(plot1, "eval\\_newton\\_poly")
-title(plot2, "actual")
+title(plot1, "eval\\_newton\\_poly \n a)")
+title(plot2, "actual polynom p(x) \n")
+title(plot3, "b)")
+title(plot5, "c)")
 
 % Komplexitaet von eval_newton_poly:
 % Sei n = die Anzahl an Koeffizienten
