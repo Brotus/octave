@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 function [A,b] = gauss(A,b)
 % u¨berfu¨hre Gleichungssystem auf a¨quivalente Dreiecksform 
 % Eingabe: A...regula¨re nxn Matrix 
@@ -24,4 +25,3 @@ for j=1:n
     end 
   b(i)=b(i)-lij*b(j);
   end
-end
