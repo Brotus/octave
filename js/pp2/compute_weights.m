@@ -9,15 +9,13 @@ function wi = compute_weights (ti)
   m = ones(n,1);
   for i = 1:n
     m(i) = (ti(n)^i-ti(1)^i)/i;
-  endfor
+  end
   
   % m = 1/(1:n);
 
   x = ones(n,n);
   for i = 2:n
     x(i,:)=ti.^(i-1);
-  endfor
+  end
   
   wi = x\m;
-  
-endfunction

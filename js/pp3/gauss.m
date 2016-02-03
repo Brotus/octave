@@ -17,35 +17,35 @@ function [R,y]=gauss(A,b)
     
     % Zeilen i und j von A vertauschen
     if(i~=j)
-      for k=j:n
-        tmp = A(i,k); A(i,k)=A(j,k); A(j,k)=tmp;
-      endfor
+      %for k=j:n
+      %  tmp = A(i,k); A(i,k)=A(j,k); A(j,k)=tmp;
+      %endfor
+      tmp = A(i,:); A(i,:)=A(j,:); A(j,:)=tmp;                                                      
       if(~bool)
         counter = counter + 1;
-      endif
-    endif
+      end
+    end
     
     % Zeilen von b 
     if(bool)
       tmp=b(i,:); b(i,:)=b(j,:);b(j,:)=tmp;
-    endif
+    end
     
     % 0 in der j-ten Spalte erzeugen
     for i=j+1:n
       lij=A(i,j)/A(j,j);
       for k=j:n
         A(i,k)=A(i,k)-lij*A(j,k);
-      endfor
+      end
       if(bool)
         b(i,:)=b(i,:)-lij.*b(j,:);
-      endif
-    endfor
-  endfor
+      end
+    end
+  end
   
   R=A;
   if(bool)
     y = b;
   else
     y = (-1)^counter;
-  endif
-endfunction
+  end

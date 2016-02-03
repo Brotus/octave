@@ -1,0 +1,11 @@
+testp1 c konvergenzaussage überdenken
+newton fix
+
+newton/testp3/banach/testp4: herausfinden, warum nicht gegen Loesung konvergiert
+
+testp4, testp5: konvergenzverhalten erklären
+
+bisection, secant, gaussnewton herausfinden, 
+warum nach norm(x0-x) ein weiterer wert berechnet wird
+
+testp5 plot + ausgabe

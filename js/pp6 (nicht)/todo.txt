@@ -1,0 +1,6 @@
+evalpp fixen bzw überlegen ob es doch richtig funktioniert, müsste es nämlich
+
+aufgabe p2 c und d
+
+aufgabe p2 b: überlegen warum die funktionen nach rechts verschoben sind oder
+  ist das korrekt?

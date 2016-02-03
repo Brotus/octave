@@ -55,24 +55,21 @@ for i = 1:length(h)
   end
 end
 disp('Linksseitige Rechteckregel')
-disp(['h        ', num2str(h)])
-disp(['Fehler   ', num2str(frec)])
-disp(['eoc      ', num2str(eocrec)])
+Sol1 = [h; frec; eocrec];
+Sol1
 disp('  ')
 
 disp('Trapezregel')
-disp(['h        ', num2str(h)])
-disp(['Fehler   ', num2str(ftra)])
-disp(['eoc      ', num2str(eoctra)])
+Sol2 = [h; ftra; eoctra];
+Sol2
 disp('  ')
 
 disp('Simpsonregel')
-disp(['h        ', num2str(h)])
-disp(['Fehler   ', num2str(fsim)])
-disp(['eoc      ', num2str(eocsim)])
+Sol3 = [h; fsim; eocsim];
+Sol3
 disp('  ')
 
-disp(['EOC von 0 bedeutet, dass er undefiniert ist.'])
+disp(['EOC von 0 bedeutet, dass er undefiniert ist. Die erste Zeile ist h, die Zweite der Fehler und die Dritte der EOC.'])
 
 % Aufgabe (c)
 semilogy(h,frec,'r', h,ftra,'b', h,fsim,'g')

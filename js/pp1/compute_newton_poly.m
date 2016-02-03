@@ -12,4 +12,3 @@ function [ci,xi] = compute_newton_poly (xi,yi)
       ci(j)=(ci(j)-ci(j-1))/(xi(j)-xi(j-i));
     end
   end
-endfunction
