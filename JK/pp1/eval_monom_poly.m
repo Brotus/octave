@@ -4,3 +4,6 @@ function r = eval_monom_poly(ai,x)
 	for i = n:-1:1
 		r = ai(i) + x*r;
 	end
+	
+	
+	
