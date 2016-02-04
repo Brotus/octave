@@ -17,7 +17,7 @@ y3=eval_newton_poly(ci3,xi3,x);
 % Die von Hand berechnete Monom-Darstellung für den plot
 p1=@(x) 1;
 p2=@(x) 2*x+1;
-p3=@(x) 4*x*2-x+1;
+p3=@(x) 4*x.^2-x+1;
 
 % Die fplot punkte
 [a1,b1] = fplot(p1, x2);

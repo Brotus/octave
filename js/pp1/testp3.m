@@ -83,12 +83,12 @@ endfor
 
 % Interpretation:
 % Wenn die Funktion mit hoeheren Grades approximiert wird, so ist diese schneller.
-% Bei n = 5 unterschreited der Fehler 1e-15, sodass die Angezeigte eoc nicht mehr verlässlich ist.
+% Bei n = 5 unterschreited der Fehler 1e-15, sodass die angezeigte eoc nicht mehr verlässlich ist.
 
 % Teilaufgabe (e)
 % Fuer n = 5 wird e(h,n) nicht geplottet, da es nicht mehr korrekt ist (siehe Interpretation)
 title("h vs e(h,n)");
 xlabel("h");
 ylabel("e(h,n)");
-loglog(h,Tab(:,2),";n=1;",h,Tab(:,5),";n=2;",h,Tab(:,8),";n=3;",h,Tab(:,11),";n=4;")
+loglog(h,Tab(:,2),";n=1;",h,Tab(:,5),";n=2;",h,Tab(:,8),";n=3;",h,Tab(:,11),";n=4;",h,Tab(:,14),";n=5;")
 
