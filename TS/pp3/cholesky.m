@@ -5,17 +5,21 @@ function [L,D]=cholesky(A)
 %           D... Diagonalmatrix
 n=size(A,1); D=zeros(n,n); L=eye(n);
 for k=1:n % Spalte k in Cholesky
-  % Berechnung von D(k,k)
-  for j=1:k-1
-    A(k,k)=A(k,k)-L(k,j)*D(j,j)*L(k,j);
+  if k != 1
+    l = k-1;
+  else
+    l = k;
   end
+  % Berechnung von D(k,k)
+  for j=1:l
+  dlj=D(j,j)*L(k,j);
+  A(k,k)=A(k,k)-L(k,j)*dlj;
   D(k,k)=A(k,k);
   % Berechnung von L(i,k)
-  for i=k+1:n
-    for j=1:k-1
-      A(i,k)=A(i,k)-L(i,j)*D(j,j)*L(k,j);
+    for i=k+1:n
+      A(i,k)=A(i,k)-L(i,j)*dlj;
+      L(i,k)=A(i,k)/D(k,k);
     end
-    L(i,k)=A(i,k)/D(k,k);
   end
 end
 end

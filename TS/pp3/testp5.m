@@ -24,6 +24,6 @@ ax = solveCholesky(aA,ab)
 disp('Dritte Matrix')
 cx = solveCholesky(cA,cb)
 
-% Komplexität von forward: #(ops) = 1/2mn²+1/2mn
+% Komplexität von forward: #(ops) = 1/2mn^2+1/2mn
 %                          n... Größe von L
 %                          m... Spaltenzahl von b

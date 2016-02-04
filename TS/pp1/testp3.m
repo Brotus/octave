@@ -95,12 +95,21 @@ x = [];
 end
 
 % (e)
-loglog(h,AllTables(:,2),'r',
+figure
+loglog(
+h,AllTables(:,2),'r',
 h,AllTables(:,5),'b',
 h,AllTables(:,8),'g',
 h,AllTables(:,11),'c',
-h,AllTables(:,14),'m')
+h,AllTables(:,14),'m',
+h,h.^1,'ro',
+h,h.^2,'bo',
+h,h.^3,'go',
+h,h.^4,'co',
+h,h.^5,'mo')
 title('Aufgabe (e)');
 xlabel('h');
 ylabel('e(h,n)');
 legend('n=1', 'n=2', 'n=3', 'n=4', 'n=5', "Location", 'northwest')
+
+% Der EOC konvergiert wie vorgesehen gegen n+1; allerdings werden bei n=4 und n=5 die Werte zu klein und der EOC fehlerhaft

@@ -19,4 +19,4 @@ format short e
 tableNE = [[1:length(errNE)].' errNE.']
 tableSE = [[1:length(errSE)].' errSE.']
 format short
-% Die theoretischen Aussagen zu Newton bestätigen sich; secant konvergiert langsamer.
+% Die theoretischen Aussagen zu Newton bestätigen sich (quadratisch); secant konvergiert langsamer.
