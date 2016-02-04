@@ -1,26 +1,36 @@
 f=@(x) exp(x);
-
+sums = zeros(6,3);
+err = sums;
+eoc = -1*ones(6,3);
+h=2.^(-[0:5]);
 % Teilaufgabe a
+for l=0:5
+	hl=h(l+1);
+	i=0:(2^l);
+	z=i.*hl;
+	tiRect=0;
+	wiRect=1;
+	tiTrap=[0,1];
+	wiTrap=[1/2,1/2];
+	tiSimp=[0,1/2,1];
+	wiSimp=[1/6,4/6,1/6];
+	sums(l+1,1)=sum_quadrature(f,z,tiRect,wiRect);
+	sums(l+1,2)=sum_quadrature(f,z,tiTrap,wiTrap);
+	sums(l+1,3)=sum_quadrature(f,z,tiSimp,wiSimp);
+end
+% 1. Spalte, (l+1)-te Zeile: l-te summierte Quadratur, linksseitige Rechtecksregel
+% 2. ...																							 Trapezregel
+% 3. ...																							 Simpson-Regel
+sums
 
-wi = [];
-ti = [];
+% Teilaufgabe b
+z=(e-1)*ones(6,3);
+err=abs(sums-z);
+err
 
-T0 = [0,1];
-T1 = [0,1/2,1];
-T2 = [0,1/4,1/2,3/4,1];
-T3 = zeros(1,2^3+1);
-for i = 1:2^3
-  T3(i+1)= i * 2^-3;
-endfor
-T4 = zeros(1,2^4+1);
-for i = 1:2^4
-  T4(i+1)= i * 2^-4;
-endfor
-T5 = zeros(1,2^5+1);
-for i = 1:2^5
-  T5(i+1)= i * 2^-5;
-endfor
-
-% linksseitige Rechteckregel
-SI0_recht = sum_quadrature(f,T0,0,1);
-
+for i = 2:6
+	for j = 1:3
+		eoc(i,j)=log(err(i-1,j)/err(i,j))/log(2);
+	end
+end
+eoc
