@@ -34,3 +34,10 @@ for i = 2:6
 	end
 end
 eoc
+
+
+% Teilaufgabe c
+loglog(h,err(:,1),'r', h,err(:,2),'b', h,err(:,3),'g')
+xlabel('h')
+ylabel('Fehler')
+legend('Rechteckregel', 'Trapezregel', 'Simpsonregel', "Location", 'northwest')

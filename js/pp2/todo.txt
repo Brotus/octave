@@ -1,9 +1,6 @@
 Aufgabe P1
   schöne Tabelle
 Aufgabe P2
-  zweite Hälfte
-Aufgabe P3
-Aufgabe P4
-  testp4
+  konvergenz beschreiben
 Aufgabe P5
   Kommentare in gauss_rule
