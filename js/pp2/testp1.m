@@ -9,10 +9,10 @@ for i = 1:(n+1)
   % linksseitige Rechteckregel
   r(1,i) = quadrature(f,a,b,0,1);
   % Trapez-Regel
-  r(2,i) = quadrature(f,a,b,[a,b],[1/2,1/2]);
+  r(2,i) = quadrature(f,a,b,[0,1],[1/2,1/2]);
   % Simpson-Regel
-  r(3,i) = quadrature(f,a,b,[0,b/2,b],[1/6,4/6,1/6]);
-endfor
+  r(3,i) = quadrature(f,a,b,[0,1/2,1],[1/6,4/6,1/6]);
+end
 
 r
 
@@ -26,9 +26,11 @@ tab(:,1)=h';
 
 for i = 1:3
   for j = 1:(n+1)
-    tab(j,2*i)=abs(r(i,j)-quad(f,a,h(j)));
+    %tab(j,2*i)=abs(r(i,j)-quad(f,a,h(j)));
+		tab(j,2*i)=abs(r(i,j)-f(h(j))+f(a));
     if (j > 1)
-      tab(j,2*i+1)=log(r(i,j)/r(i,j-1))/log(h(j)/h(j-1));
+      %tab(j,2*i+1)=log(r(i,j)/r(i,j-1))/log(h(j)/h(j-1));
+			tab(j,2*i+1)=log(tab(j-1,2*i)/tab(j,2*i))/log(h(j-1)/h(j));
     else
       tab(j,2*i+1)=-1;
     endif
