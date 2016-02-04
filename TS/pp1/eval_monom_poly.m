@@ -3,9 +3,11 @@ function r = eval_monom_poly(ai,x)
 % Eingabe:	ai... Vektor der ai aus p(x)
 %		       	x.... Vektor der auszuwertenden Stellen
 % Ausgabe:	r.... Vektor der Ergebnisse
-for i=1:length(x)
-	r(i) = ai(1);
-	for j=2:length(ai)
-		r(i) = r(i) + ai(j)*x(i)^(j-1);
-	end
+n = length(ai) - 1;
+for j=1:length(x)
+  r(j)=ai(n+1);
+  for i=n:-1:1
+    r(j)=ai(i)+x(j)*r(j);
+  end
+end
 end
