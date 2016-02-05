@@ -4,14 +4,16 @@ function [L,D]=cholesky(A)
 % Ausgabe:  L... linke untere Dreiecksmatrix
 %           D... Diagonalmatrix
 n=size(A,1); D=zeros(n,n); L=eye(n);
+
+% Berechnung für k=1, da Schleifentausch Zugriff nicht ermöglicht
+D(1,1) = A(1,1);
+for i=2:n
+  L(i,1)=A(i,1)/D(1,1);
+end
+    
 for k=1:n % Spalte k in Cholesky
-  if k != 1
-    l = k-1;
-  else
-    l = k;
-  end
   % Berechnung von D(k,k)
-  for j=1:l
+  for j=1:k-1
   dlj=D(j,j)*L(k,j);
   A(k,k)=A(k,k)-L(k,j)*dlj;
   D(k,k)=A(k,k);
