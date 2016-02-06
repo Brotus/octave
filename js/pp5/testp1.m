@@ -1,6 +1,6 @@
 % Teilaufgabe a
 
-a=1;b=2;f=@(x)cos(x);tol=1e-5;
+a=1;b=2;f=@(x)cos(x);tol=1e-8;
 [x1,xk1]=bisection(f,a,b,tol);
 [x2,xk2]=regulaFalsi(f,a,b,tol,10);
 x1

@@ -6,6 +6,7 @@ maxit=20;
 
 [x,xk]=newton(F,DF,x0,tol,maxit);
 xsol=[0.171333648176476,0.021321814151372];
+x
 xk'
 n=size(xk,2);
 ek=zeros(n,2);

@@ -7,11 +7,12 @@
 function [x,xk]=bisection(f,a,b,tol)
   fa=f(a); fb=f(b); xk=[];
   while 1
-    c=(a+b)/2; fc=f(c);
-    xk=[xk,c];
-    if abs(b-a)<=tol
+    % if abs(f(c))<tol break; end
+    if abs(b-a)<tol
       break;
     end
+    c=(a+b)/2; fc=f(c);
+    xk=[xk,c];
     if fc*fa<0
       b=c; fb=fc;
     else
