@@ -8,7 +8,7 @@ xia=[0];
 cib=[1,2];
 xib=[0,1];
 %c
-cic=[1,2,4];
+cic=[1,3,4];
 xic=[0,1,2];
 
 % Die enstprechenden Polynome
