@@ -18,6 +18,6 @@ title(plot1,'eval newton poly')
 plot(plot2, x,1,'r', x,1+2*(x-0),'b', x,1+3*(x-0)+4*(x.^2-x),'g')
 title(plot2,'p(x)')
 
-% Komplexität:	#(ops)=m*1/2(n^2-n)
+% Komplexität:	#(ops)=1/2*m*(n^2-n)
 %				        m  ... Länge von x
 %				        n  ... Länge von xi und ci

@@ -1,0 +1,5 @@
+determine_exactness_order([0,1],compute_weights([0,1]))
+determine_exactness_order([0,1/2,1],compute_weights([0,1/2,1]))
+determine_exactness_order([0,1/3,2/3,1],compute_weights([0,1/3,2/3,1]))
+determine_exactness_order([0,1/4,1/2,3/4,1],compute_weights([0,1/4,1/2,3/4,1]))
+determine_exactness_order([0,1/5,2/5,3/5,4/5,1],compute_weights([0,1/5,2/5,3/5,4/5,1]))

@@ -45,4 +45,5 @@ for i = 1:length(h)
   disp([num2str(h(i),'%8.5f'), ' ', num2str(fehlerrec(i),'%8.5f'), ' ', num2str(eocrec(i),'%8.5f'), ' ', num2str(fehlertra(i),'%8.6f'), ' ', num2str(eoctra(i),'%8.5f'), ' ', num2str(fehlersim(i),'%8.11f'), ' ', num2str(eocsim(i),'%8.5f')])
 end
 disp(['EOC von 0 bedeutet, dass er undefiniert ist.'])
+
 % Die Konvergenzaussagen aus der Vorlesung, welche Exaktheitsgrad m+2 als Konvergenzordnung darstellen, bestätigen sich

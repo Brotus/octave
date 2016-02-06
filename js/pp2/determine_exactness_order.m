@@ -9,7 +9,6 @@ function m = determine_exactness_order (ti,wi)
   m = 0;
   while 1
     f = @(x) x^m;
-	% int_0^1 x^m dx = 1/(m+1)
     err = abs(quadrature(f,0,1,ti,wi)-1/(m+1));
     if (err >= eps)
       break;
