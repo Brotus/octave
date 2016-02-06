@@ -1,4 +1,0 @@
-fix cholesky
-abklären ob forward oder forwardAltern
-testp4 und testp5 testen
-kommentare: solveCholesky, forwardAltern, cholesky/choleskytest
