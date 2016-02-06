@@ -18,7 +18,7 @@ y=f(x)
 
 for j=1:length(h);
 [ci,xi] = compute_newton_poly(x(j,:),y(j,:));
-fprintf('Fuer h = %2f erhalten wir das Polynom \n p_1(X) = %4.2f + (x - %4.2f)*%4.2f. \n',h(j),ci(1),xi(1),ci(2))
+fprintf('Fuer h = %2f erhalten wir das Polynom \n p_1(X) = %4.2f + (x - %4.2f)*%4.6f. \n',h(j),ci(1),xi(1),ci(2))
 end
 
 % Aufgabe b

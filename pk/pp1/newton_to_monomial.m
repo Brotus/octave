@@ -1,20 +1,9 @@
-function [M, ci, xi] = newton_to_monomial (ci,xi) 
-  xi = xi;
-  M=zeros(length(ci),length(ci));
-  for i = 1:length(ci);
-   for j = 1:length(ci);
-    if (i == j)
-     M(i,j) =1;
-    elseif (i < j)
-      if (rem(i+j,2) == 0)
-        sign = 1;
-      else
-        sign =-1;
-      M(i,j)=sign*aux_newtomon((j-1)-(i-1),xi(1:j-1));
-      end
-    end
-   end
-  end
-  M
-  ci = M*ci';
-end
+% Diese Funktion transformiert ein Polynom in Lagrange-Darstellung in die Monom-Darstellung.
+% Eingabe:  ci=[c0,...,cn]    sind die Newton-Koeffizienten
+%           xi=[x0,...,xn-1]  sind die Stützstellen des Newton-Interpolationspolynoms
+% Ausgabe:  a =[a0,...,an]    sind die Koeffizienten der Monom-Darstellung
+function a = newton_to_monomial(ci,xi)
+  [L,U]=lu(fliplr(vander(xi)).');
+  a=(((L.')^(-1))*(ci.')).';
+
+% siehe https://www.inf.ethz.ch/personal/gander/papers/changing.pdf
