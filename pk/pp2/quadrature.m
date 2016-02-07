@@ -2,7 +2,7 @@ function r = quadrature (f,a,b,ti,wi)
 % Eingabe:    f...function handle
 %             a...linke Grenze
 %             b...rechte Grenze
-%             ti...Stützstellen
+%             ti...Stuetzstellen
 %             wi...Integrationsgewichte
 % Ausgabe     r...Wert der Quadratur
   r= 0;

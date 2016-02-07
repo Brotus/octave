@@ -25,7 +25,7 @@ end
 % Die exakten Werte
 integ = [exp(1)-1,exp(1/2)-1,exp(1/4)-1,exp(1/8)-1,exp(1/16)-1,exp(1/32)-1];
 Tab = zeros(6,4);
-Tab(:,1) = [0:5];
+Tab(:,1) = b;
 for k = 1:3;
   if (k == 1)
       fprintf('Linksseitige Rechtecksregel \n')
@@ -40,10 +40,15 @@ for k = 1:3;
     Tab(i,3) = abs(integ(i)-q(k,i));
     if (i > 1)
     % log fehlerquotient / log h-quotient
-      Tab(i,4) = log(Tab(i-1,3)/Tab(i,3))/log(i/(i-1));
+      Tab(i,4) = log(Tab(i-1,3)/Tab(i,3))/log(Tab(i-1,1)/Tab(i,1));
     else 
       Tab(i,4) = inf;  
     end
   end
   Tab
 end
+
+
+% Die Konvergezordnung für die Lineare Quadratur ist  m+2, wobei m der
+% Exaktheitsgrad ist. Die Exaktheitsgrade liegen jeweils bei 0,1 und 3
+% entsprechend gehen die eoc's gegen 2, 3 bzw. 5.
