@@ -4,10 +4,10 @@
 % #(ops) = O(1)+m*n*(O(1)+O(n)+O(1)) = O(m*n^2).
 
 % Initialisierung der Ausgangswerte
-x = [0:0.1:5];
+x = 0:0.1:5;
 x2= [0,5];
-ci1=[1];ci2=[1,2];ci3=[1,3,4];
-xi1=[0];xi2=[0,1];xi3=0:2;
+ci1=1;ci2=[1,2];ci3=[1,3,4];
+xi1=0;xi2=[0,1];xi3=0:2;
 
 % Die yi sind Vektoren der Funktionswerte an den Einträgen von x
 y1=eval_newton_poly(ci1,xi1,x);
@@ -26,8 +26,11 @@ p3=@(x) 4*x.^2-x+1;
 
 % Erzeuge ein Plotfenster mit 3 subplots.
 subplot (3, 1, 1)
-plot(x,y1,"--r",a1,b1,":b")
+% plot(x,y1,"--r",a1,b1,":b")   % Octave
+plot(x,y1,'--r',a1,b1,':b')     % Matlab
 subplot (3, 1, 2)
-plot(x,y2,"--r",a2,b2,":b")
+% plot(x,y2,"--r",a2,b2,":b")   % Octave
+plot(x,y2,'--r',a2,b2,':b')     % Matlab
 subplot (3, 1, 3)
-plot(x,y3,"--r",a3,b3,":b")
+% plot(x,y3,"--r",a3,b3,":b")   % Octave
+plot(x,y3,'--r',a3,b3,':b') 

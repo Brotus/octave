@@ -24,12 +24,13 @@ y2m=eval_monom_poly(ai2,x);
 y3m=eval_monom_poly(ai3,x);
 
 % Test, ob die Algorithmen hinreichend genau rechnen
-norm(y1n-y1m,inf)+norm(y2n-y2m,inf)+norm(y3n-y3m,inf) < 1e-13
+disp('exact?')
+disp(norm(y1n-y1m,inf)+norm(y2n-y2m,inf)+norm(y3n-y3m,inf) < 1e-13)
 
 % Grafischer Vergleich
 subplot(3,1,1)
-plot(x,y1n,"--r",x,y1m,":b")
+plot(x,y1n,'-b',x,y1m,'or')
 subplot(3,1,2)
-plot(x,y2n,"--r",x,y2m,":b")
+plot(x,y2n,'-b',x,y2m,'or')
 subplot(3,1,3)
-plot(x,y3n,"--r",x,y3m,":b")
+plot(x,y3n,'-b',x,y3m,'or')

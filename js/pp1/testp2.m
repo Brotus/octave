@@ -17,4 +17,6 @@ ci2H=[1,1];
 ci3H=[1,1,-1];
 
 % Test
-(c1==ci1H)&&(c2==ci2H)&&(c3==ci3H)
+disp('arrays are equal:')
+% (c1==ci1H)&&(c2==ci2H)&&(c3==ci3H)% Octave
+disp(isequal(c1,ci1H) & isequal(c2,ci2H) & isequal(c3,ci3H)) % Matlab
