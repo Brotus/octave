@@ -20,7 +20,7 @@ for l=0:5
 end
 
 % Teilaufgabe b
-z=(e-1)*ones(6,3);
+z=(exp(1)-1)*ones(6,3);
 err=abs(sums-z);
 
 
@@ -37,14 +37,14 @@ end
 % 3. ...																							 Simpson-Regel
 disp(['rec','       ','tra','       ','sim'])
 disp('sums:')
-disp(num2str(sums,"%10f"))
+disp(num2str(sums,'%10f'))
 disp('errors:')
-disp(num2str(err,"%10f"))
+disp(num2str(err,'%10f'))
 disp('eoc')
-disp(num2str(eoc,"%10f"))
+disp(num2str(eoc,'%10f'))
 
 % Teilaufgabe c
 loglog(h,err(:,1),'r', h,err(:,2),'b', h,err(:,3),'g')
 xlabel('h')
 ylabel('Fehler')
-legend('Rechteckregel', 'Trapezregel', 'Simpsonregel', "Location", 'northwest')
+legend('Rechteckregel', 'Trapezregel', 'Simpsonregel', 'Location', 'northoutside')
