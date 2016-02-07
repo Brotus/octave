@@ -1,6 +1,6 @@
 % Komplexität von compute_newton_poly:
-% Ist m die Länge der Eingabevektoren und zaehlt man nur Multiplikationen und Divisionen, so erhält man den Aufwand
-% #(ops) = (m-1)*O(m)*O(1) = O(m^2).
+% Der Aufwand beträgt \sum_(i=1)^(m-1) m - i = m*(m-1)/2 
+% also O(n^2). 
 
 % Initialisierung der Ausgangsdaten
 xi1=0;xi2=0:1;xi3=0:2;

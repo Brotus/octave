@@ -8,18 +8,13 @@ xia=[0];
 cib=[1,2];
 xib=[0,1];
 %c
-cic=[1,2,4];
+cic=[1,3,4];
 xic=[0,1,2];
 
 % Die enstprechenden Polynome
 pa=@(z) cia(1);
 pb=@(z) cib(1)+cib(2).*(z-xib(1));
 pc=@(z) cic(1)+cic(2).*(z-xic(1))+cic(3).*(z-xic(1)).*(z-xic(2));
-
-% Auswertung der Polynome
-%[x1, y1] = fplot(pa, [1,5]);
-%[x2, y2] = fplot(pb, [1,5]);
-%[x3, y3] = fplot(pc, [1,5]);
 
 % Die ensprechenden resultate von eval_newton_poly
 ra=eval_newton_poly(cia,xia,x);
