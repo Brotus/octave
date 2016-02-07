@@ -13,8 +13,8 @@ for i = 1:(n+1)
   r(3,i) = quadrature(f,a,b,[0,1/2,1],[1/6,4/6,1/6]);
 end
 
-disp(['rec','       ','tra','       ','sim'])
-disp(num2str(r','%10f'))
+disp(['rec','       ','tra','       ','sim']);
+disp(num2str(r','%10f'));
 
 tab = zeros(n+1,7);
 tab(:,1)=h';
@@ -29,8 +29,8 @@ for i = 1:3
     end
   end
 end
-disp('')
-disp('fehler & eoc')
+disp('');
+disp('fehler & eoc');
 disp('eoc == -1 means undefined')
-disp(['h','         ','rec','       ','rec eoc','   ','tra','       ','tra eoc','   ','sim','       ','sim eoc'])
-disp(num2str(tab,'%10f'))
+disp(['h','         ','rec','       ','rec eoc','   ','tra','       ','tra eoc','   ','sim','       ','sim eoc']);
+disp(num2str(tab,'%10f'));

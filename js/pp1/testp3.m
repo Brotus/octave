@@ -49,8 +49,8 @@ tab(1,3) = -1;
 for l = 2:(m+1)
   tab(l,3) = log(tab(l,2)/tab(l-1,2))/log(tab(l,1)/tab(l-1,1));
 end
-disp('n=1')
-disp(tab)
+disp('n=1');
+disp(tab);
 Tab = tab;
 
 % Teilaufgabe (d)
@@ -80,8 +80,8 @@ for p = 2:5
     tab(l,3) = log(tab(l,2)/tab(l-1,2))/log(tab(l,1)/tab(l-1,1));
   end
   Tab = [Tab tab];
-  disp(['n = ',num2str(n)])
-  disp(tab)
+  disp(['n = ',num2str(n)]);
+  disp(tab);
 end
 
 % Interpretation:

@@ -35,13 +35,13 @@ end
 % 1. Spalte, (l+1)-te Zeile: l-te summierte Quadratur, linksseitige Rechtecksregel
 % 2. ...																							 Trapezregel
 % 3. ...																							 Simpson-Regel
-disp(['rec','       ','tra','       ','sim'])
-disp('sums:')
-disp(num2str(sums,'%10f'))
-disp('errors:')
-disp(num2str(err,'%10f'))
-disp('eoc')
-disp(num2str(eoc,'%10f'))
+disp(['rec','       ','tra','       ','sim']);
+disp('sums:');
+disp(num2str(sums,'%10f'));
+disp('errors:');
+disp(num2str(err,'%10f'));
+disp('eoc');
+disp(num2str(eoc,'%10f'));
 
 % Teilaufgabe c
 loglog(h,err(:,1),'r', h,err(:,2),'b', h,err(:,3),'g')

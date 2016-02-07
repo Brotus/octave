@@ -1,5 +1,3 @@
-testp1 c konvergenzaussage überdenken
+testp1 c konvergenzaussage ueberdenken
 
-testp4, testp5: konvergenzverhalten erklären
-
-testp5 plot + ausgabe
+testp4, testp5: konvergenzverhalten erklaeren

@@ -24,8 +24,8 @@ y2m=eval_monom_poly(ai2,x);
 y3m=eval_monom_poly(ai3,x);
 
 % Test, ob die Algorithmen hinreichend genau rechnen
-disp('exact?')
-disp(norm(y1n-y1m,inf)+norm(y2n-y2m,inf)+norm(y3n-y3m,inf) < 1e-13)
+disp('exact?');
+disp(norm(y1n-y1m,inf)+norm(y2n-y2m,inf)+norm(y3n-y3m,inf) < 1e-13);
 
 % Grafischer Vergleich
 subplot(3,1,1)

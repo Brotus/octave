@@ -2,7 +2,12 @@ tol=1e-10;
 x0=[0;0];
 phi=@(x) [(cos(x(1))+2*x(2))/6;(x(1)*x(2)^2+sin(x(1)))/8];
 maxit=8;
-[x,xk]=banach(phi,x0,tol,maxit)
+[x,xk]=banach(phi,x0,tol,maxit);
+
+disp('solution');
+disp(x);
+disp('steps');
+disp(xk');
 
 
 xsol=[0.171333648176476,0.021321814151372]; % laut WolframAlpha
@@ -14,4 +19,6 @@ for i=1:n
   ek(i,2)=norm(xsol2-xk(:,i));
 end
 ek(:,1)=1:n;
-ek
+
+disp('    k         xk');
+disp(ek);
