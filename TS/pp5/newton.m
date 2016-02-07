@@ -10,7 +10,7 @@ function [x,xk] = newton(F,DF,x0,tol,maxit)
 x = x0;
 xk(:,1) = x;
 for i=2:maxit
-  x = xk(:,i-1) - inverse(DF(xk(:,i-1))) * F(xk(:,i-1));
+  x = xk(:,i-1) + inverse(DF(xk(:,i-1))) * (-F(xk(:,i-1)));
   xk(:,i) = x;
   if norm(xk(:,i) - xk(:,i-1)) < tol
     break;
