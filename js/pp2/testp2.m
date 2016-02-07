@@ -18,26 +18,33 @@ for l=0:5
 	sums(l+1,2)=sum_quadrature(f,z,tiTrap,wiTrap);
 	sums(l+1,3)=sum_quadrature(f,z,tiSimp,wiSimp);
 end
-% 1. Spalte, (l+1)-te Zeile: l-te summierte Quadratur, linksseitige Rechtecksregel
-% 2. ...																							 Trapezregel
-% 3. ...																							 Simpson-Regel
-sums
 
 % Teilaufgabe b
-z=(e-1)*ones(6,3);
+z=(exp(1)-1)*ones(6,3);
 err=abs(sums-z);
-err
+
 
 for i = 2:6
 	for j = 1:3
 		eoc(i,j)=log(err(i-1,j)/err(i,j))/log(2);
 	end
 end
-eoc
 
+% Ausgabe a & b
+
+% 1. Spalte, (l+1)-te Zeile: l-te summierte Quadratur, linksseitige Rechtecksregel
+% 2. ...																							 Trapezregel
+% 3. ...																							 Simpson-Regel
+disp(['rec','       ','tra','       ','sim']);
+disp('sums:');
+disp(num2str(sums,'%10f'));
+disp('errors:');
+disp(num2str(err,'%10f'));
+disp('eoc');
+disp(num2str(eoc,'%10f'));
 
 % Teilaufgabe c
 loglog(h,err(:,1),'r', h,err(:,2),'b', h,err(:,3),'g')
 xlabel('h')
 ylabel('Fehler')
-legend('Rechteckregel', 'Trapezregel', 'Simpsonregel', "Location", 'northwest')
+legend('Rechteckregel', 'Trapezregel', 'Simpsonregel', 'Location', 'northoutside')

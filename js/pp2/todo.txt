@@ -1,5 +1,3 @@
-Aufgabe P1
-  schöne Tabelle
 Aufgabe P2
   konvergenz beschreiben
 Aufgabe P5
