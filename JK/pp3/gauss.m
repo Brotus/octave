@@ -36,4 +36,4 @@ if size(b,2) >= 1
 	y = b;
 else 
 	R = A;
-	y = l
+	y = (-1)^l
