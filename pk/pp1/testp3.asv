@@ -83,9 +83,7 @@ for n=2:5;
    Tab = [Tab tab];
 end
 
-% Ab Ordnung 4 fangen die Werte an in die Nähe von 1e-16 zu kommen, hier
-% versagt die "Double-Precision" Genauigkeit. Man kann aber erkennen, dass
-% eine höhere Ordnung für einen geringeren Fehler sorgt.
+% Ab Ordnung 4 fangen die Werte an in die Nähe von 1e-16 zu kommen, 
 %e
 title('Aufgabe e: h vs e(h,n)')
 xlabel('h')

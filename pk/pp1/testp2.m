@@ -17,4 +17,4 @@ ci2H=[1,1];
 ci3H=[1,1,-1];
 
 % Test
-(c1==ci1H)&&(c2==ci2H)&&(c3==ci3H)
+true (c1==ci1H) & true (c2==ci2H) & true (c3==ci3H)

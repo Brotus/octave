@@ -32,12 +32,12 @@ plot1 = subplot(1,3,1);
 plot2 = subplot(1,3,2);
 plot3 = subplot(1,3,3);
 
-plot(plot1, x, ra, "r", x, rb, "g", x, rc, "b")
-plot(plot2, x, pa(x), "r", x, pb(x), "g", x, pc(x), "b")
-plot(plot3, x, rma, "r", x, rmb, "g", x, rmc, "b")
-title(plot1, "eval\\_newton\\_poly \n")
-title(plot2, "actual polynom p(x) \n")
-title(plot3, "eval\\_monom\\_poly \n")
+plot(plot1, x, ra, '.-r', x, rb, 'g', x, rc, 'b')
+plot(plot2, x, pa(x), '.-r', x, pb(x), 'g', x, pc(x), 'b')
+plot(plot3, x, rma, '.-r', x, rmb, 'g', x, rmc, 'b')
+title(plot1, 'eval\_newton\_poly')
+title(plot2, 'actual polynom p(x)')
+title(plot3, 'eval\_monom\_poly')
 
 % Komplexität
 % Sei m die Anzahl der auszuwertenden Stellen und n die Anzahl der Koeffizieten
