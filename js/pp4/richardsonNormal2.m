@@ -5,14 +5,16 @@
 %           omega: die Schrittweite
 % Ausgabe:  z: die letzte Iterierte
 %           res: Vektor der Normen der Residuen
-function [z,res] = richardsonNormal(A,b,tol,maxit,omega)
-z = zeros(size(A,2),1);
-res(1) = norm(A.'*(A*z-b));
-for i=2:maxit
-  z = z + omega*(b-A*z);
-  res(i) = norm(A.'*(A*z-b));
-  if res(i) < tol*res(1)
-    break;
+function [z,res]=richardsonNormal(A,b,tol,maxit,omega)
+  z = 0; D=A'*A; d=A'*b;
+  res0=norm(d); % weil x0=0
+  res=res0;
+  for i=1:maxit
+    r=d-D*z;
+    resk=norm(r);
+    if(resk<tol*res0)
+      break;
+    end
+    res=[res, resk]; % aufwaending aber wir koennen es uns leisten
+    z=z+omega.*r;
   end
-end
-end
