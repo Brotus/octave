@@ -6,15 +6,13 @@ function [x,xk] = regulaFalsi(f,a,b,tol,maxit)
 %           maxit... Maximale Iterationszahl
 % Ausgabe:  x....... Approximation
 %           xk...... Vektor aller Approximationen
-i = 1;
 m = (f(b)-f(a))/(b-a);
 c = f(a) - m*a;
 s = @(x) m*x + c;
 x = -c/m;
-xk(i) = x;
-while abs(f(x)) > tol && i < maxit
-  i = i + 1;
-  if (f(a) < 0 && f(x) < 0) || (f(a) > 0 && f(x) > 0) 
+xk(1) = x;
+for i =2:maxit
+  if f(a)*f(x) > 0
     a = x;
   else
     b = x;
@@ -24,5 +22,8 @@ while abs(f(x)) > tol && i < maxit
   s = @(x) m*x + c;
   x = -c/m;
   xk(i) = x;
+  if abs(f(x)) <= tol
+    break;
+  end
 end
 end

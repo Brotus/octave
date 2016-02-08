@@ -9,4 +9,4 @@ for n = 1:5
   disp(['wi: ', num2str(wi, '%7.3f')])
 end
 
-% Vergleich: Sieht gut aus.
+% Vergleich: Die Werte passen.

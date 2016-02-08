@@ -44,7 +44,7 @@ frec = [abs(richtig - sum_quadrature(f,z0,trec,wrec)), abs(richtig - sum_quadrat
 ftra = [abs(richtig - sum_quadrature(f,z0,ttra,wtra)), abs(richtig - sum_quadrature(f,z1,ttra,wtra)), abs(richtig - sum_quadrature(f,z2,ttra,wtra)), abs(richtig - sum_quadrature(f,z3,ttra,wtra)), abs(richtig - sum_quadrature(f,z4,ttra,wtra)), abs(richtig - sum_quadrature(f,z5,ttra,wtra))];
 fsim = [abs(richtig - sum_quadrature(f,z0,tsim,wsim)), abs(richtig - sum_quadrature(f,z1,tsim,wsim)), abs(richtig - sum_quadrature(f,z2,tsim,wsim)), abs(richtig - sum_quadrature(f,z3,tsim,wsim)), abs(richtig - sum_quadrature(f,z4,tsim,wsim)), abs(richtig - sum_quadrature(f,z5,tsim,wsim))];
 for i = 1:length(h)
-  if i != 1
+  if i ~= 1
     eocrec(i) = log(frec(i-1)/frec(i)) / log(h(i-1)/h(i));
     eoctra(i) = log(ftra(i-1)/ftra(i)) / log(h(i-1)/h(i));
     eocsim(i) = log(fsim(i-1)/fsim(i)) / log(h(i-1)/h(i));
@@ -75,4 +75,7 @@ disp(['EOC von 0 bedeutet, dass er undefiniert ist. Die erste Zeile ist h, die Z
 semilogy(h,frec,'r', h,ftra,'b', h,fsim,'g')
 xlabel('h')
 ylabel('Fehler')
-legend('Rechteckregel', 'Trapezregel', 'Simpsonregel', "Location", 'northwest')
+legend('Rechteckregel', 'Trapezregel', 'Simpsonregel', 'Location', 'northwest')
+
+format short
+% Der EOC konvergiert gegen m+1
