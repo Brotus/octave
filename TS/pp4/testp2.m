@@ -35,7 +35,7 @@ g,p2(g),'g--',
 g,p1(g),'b--',
 g,p0(g),'r')
 title(plot1,'Aufgabe (b)');
-legend(plot1,'f', 'p6', 'p5', 'p4', 'p3', 'p2', 'p1', 'p0', "Location", 'northwest');
+legend(plot1,'f', 'p6', 'p5', 'p4', 'p3', 'p2', 'p1', 'p0', 'Location', 'northwest');
 
 % Aufgabe (c)
 n = [0:6];
@@ -46,6 +46,7 @@ for i=1:m
 end
 e = 1/m * e;
 % Plot
+figure
 plot2 = subplot(1,2,2);
 semilogy(plot2,n,e)
 title(plot2,'Aufgabe (c)');

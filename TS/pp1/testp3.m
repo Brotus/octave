@@ -40,7 +40,7 @@ disp('Aufgabe (c)')
 eoc = [];
 % eoc berechnen. -1 bedeutet, dass dieser eoc undefiniert ist
 for j=1:length(k)
-  if j != 1
+  if j ~= 1
     eoc(j) = log(e(j-1)/e(j)) / log(h(j-1)/h(j));
   else
     eoc(j) = -1;
@@ -83,7 +83,7 @@ x = [];
   eoc = [];
   % eoc berechnen. -1 bedeutet, dass dieser eoc undefiniert ist
   for j=1:length(k)
-    if j != 1
+    if j ~= 1
       eoc(j) = log(e(j-1)/e(j)) / log(h(j-1)/h(j));
     else
       eoc(j) = -1;
@@ -110,6 +110,6 @@ h,h.^5,'mo')
 title('Aufgabe (e)');
 xlabel('h');
 ylabel('e(h,n)');
-legend('n=1', 'n=2', 'n=3', 'n=4', 'n=5', "Location", 'northwest')
+legend('n=1', 'n=2', 'n=3', 'n=4', 'n=5', 'Location', 'northwest')
 
 % Der EOC konvergiert wie vorgesehen gegen n+1; allerdings werden bei n=4 und n=5 die Werte zu klein und der EOC fehlerhaft

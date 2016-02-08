@@ -21,4 +21,4 @@ format short e
 tableBi = [[1:length(errBi)].' errBi.']
 tableRF = [[1:length(errRF)].' errRF.']
 format short
-% Aufgabe (c): Konvergiert ähnlich schnell wie Newton.
+% Aufgabe (c): RF konvergiert besser als Bisection, aber schlechter als Newton.

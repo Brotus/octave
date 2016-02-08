@@ -12,4 +12,4 @@ end
 format short e
 Table = [[1:length(xk)].', err.']
 format short
-% Die globale lineare Konvergenz bestätigt sich
+% Die lineare Konvergenz bestätigt sich

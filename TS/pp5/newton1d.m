@@ -7,6 +7,7 @@ function [x,xk] = newton1d(f,df,x0,tol,maxit)
 %           maxit. Maximale Anzahl an Iterationen
 % Ausgabe:  x..... Approximation
 %           xk.... Vektor aller Approximationen
+xk = [];
 x = x0;
 xk(1) = x;
 for i=2:maxit
