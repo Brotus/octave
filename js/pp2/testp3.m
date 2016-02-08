@@ -7,4 +7,4 @@ for n = 1:5
   disp([ti',wi]);
 end
 
-% Die Integrationsgewichte stimmen mit denen aus dem Skript überein
+% Die Integrationsgewichte stimmen mit denen aus dem Skript ueberein

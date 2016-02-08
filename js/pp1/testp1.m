@@ -9,12 +9,12 @@ x2= [0,5];
 ci1=1;ci2=[1,2];ci3=[1,3,4];
 xi1=0;xi2=[0,1];xi3=0:2;
 
-% Die yi sind Vektoren der Funktionswerte an den Einträgen von x
+% Die yi sind Vektoren der Funktionswerte an den Eintraegen von x
 y1=eval_newton_poly(ci1,xi1,x);
 y2=eval_newton_poly(ci2,xi2,x);
 y3=eval_newton_poly(ci3,xi3,x);
 
-% Die von Hand berechnete Monom-Darstellung für den plot
+% Die von Hand berechnete Monom-Darstellung fuer den plot
 p1=@(x) 1;
 p2=@(x) 2*x+1;
 p3=@(x) 4*x.^2-x+1;

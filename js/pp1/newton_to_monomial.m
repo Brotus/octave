@@ -5,6 +5,6 @@
 % Zusammengestellt mithilfe
 %   https://www.inf.ethz.ch/personal/gander/papers/changing.pdf
 function a = newton_to_monomial(ci,xi)
-  [L,U]=lu(fliplr(vander(xi)).');
+  [L,~]=lu(fliplr(vander(xi)).');
   a=(((L.')^(-1))*(ci.')).';
 

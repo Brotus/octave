@@ -14,8 +14,6 @@ ek(:,1)=1:n;
 
 disp('    k         err');
 disp(ek);
-% lokal lineare Konvergenz
-
 
 f=@(x) (2*x+sqrt(x.^2+0.04)-1.55)^2+(2*x+sqrt(x.^2+0.16)-1.65)^2+(2*x+sqrt(x.^2+0.36)-1.80)^2;
 fxk=xk;
@@ -26,3 +24,10 @@ end
 
 %plot(X,Y,'-b',xk,fxk,'r.')
 plot(X,Y,'-b',xk,fxk,'r--')
+
+ekquot = ek;
+for i = 1:(size(ekquot,1)-1)
+    ekquot(i,2)=ekquot(i+1,2)/ekquot(i,2);
+end
+disp(ekquot)
+% superlineare konvergenz

@@ -11,6 +11,7 @@ for l = j
   x(l,:) = i.*h(l);
 end
 disp('Stuetzstellen:')
+disp(['        ','i=0','   ','i=1']);
 disp(x)
 
 % Funktionswerte berechnen
@@ -37,6 +38,8 @@ for l = j;
   % der maximale Fehler
   e_h(l) = norm(fG-fGA, inf);
 end
+disp('Interpolationsfehler');
+disp(e_h);
 
 % Teilaufgabe (c)
 % Die Tabelle tab enthält in der ersten Spalte h, in der zweiten die Fehler e_h und in der dritten eoc.
@@ -50,6 +53,7 @@ for l = 2:(m+1)
   tab(l,3) = log(tab(l,2)/tab(l-1,2))/log(tab(l,1)/tab(l-1,1));
 end
 disp('n=1');
+disp(['    ','h','         ','fehler','    ','eoc']);
 disp(tab);
 Tab = tab;
 
@@ -81,6 +85,7 @@ for p = 2:5
   end
   Tab = [Tab tab];
   disp(['n = ',num2str(n)]);
+  disp(['    ','h','         ','fehler','    ','eoc']);
   disp(tab);
 end
 
@@ -97,8 +102,9 @@ end
 %loglog(h,Tab(:,2),";n=1;",h,Tab(:,5),";n=2;",h,Tab(:,8),";n=3;",h,Tab(:,11),";n=4;",h,Tab(:,14),";n=5;")
 
 
-loglog(h,Tab(:,2),'-b',h,Tab(:,5),'-g',h,Tab(:,8),'-r',h,Tab(:,11),'-c',h,Tab(:,14),'-m')
+loglog(h,Tab(:,2),'-b',h,Tab(:,5),'-g',h,Tab(:,8),'-r',h,Tab(:,11),'-c',h,Tab(:,14),'-m',h,h.^1,'bo',h,h.^2,'go',h,h.^3,'ro',h,h.^4,'co',h,h.^5,'mo')
 title('h vs e(h,n)');
 xlabel('h');
 ylabel('e(h,n)');
 legend('n=1','n=2','n=3','n=4','n=5','Location','northwest');
+grid on;

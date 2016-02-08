@@ -48,3 +48,6 @@ loglog(h,err(:,1),'r', h,err(:,2),'b', h,err(:,3),'g')
 xlabel('h')
 ylabel('Fehler')
 legend('Rechteckregel', 'Trapezregel', 'Simpsonregel', 'Location', 'northoutside')
+
+
+% Die Steigung der Gerade ist die Konvergenzrate.

@@ -3,9 +3,7 @@
 %             wi ist ein Vektor der Integrationsgewichte
 % Ausgabe:    m ist der Exaktheitsgrad der Quadraturformel
 function m = determine_exactness_order (ti,wi)
-  eps = 1e-14;
-  a = 0; b = 1;
-  
+  eps = 1e-14;  
   m = 0;
   while 1
     f = @(x) x^m;

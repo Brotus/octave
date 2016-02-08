@@ -1,5 +1,5 @@
 % Eingabe:  ci  = Newton-Koeffizienten [ci_0,...,ci_n]
-%           xi  = Stützstellen         [xi_0,...,xi_{n-1}]
+%           xi  = Stuetzstellen         [xi_0,...,xi_{n-1}]
 %           x   = Auswertungsstellen   [x_0,...,x_m]
 % Ausgabe:  r   = Vektor der Werte des
 %                 Interpolationspoly-

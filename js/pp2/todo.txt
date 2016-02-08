@@ -1,4 +1,0 @@
-Aufgabe P2
-  konvergenz beschreiben
-Aufgabe P5
-  Kommentare in gauss_rule

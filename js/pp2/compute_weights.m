@@ -1,8 +1,8 @@
 % Diese Funktion berechnet fuer beliebige Stuetzstellen die Integrationsgewichte zu einer
 %   interpolatorischen Quadraturformel.
-% Eingabe:    ti=[t1,...,tn] mit t1<...<tn sind die Stützstellen
+% Eingabe:    ti=[t1,...,tn] mit t1<...<tn sind die Stuetzstellen
 % Ausgabe:    wi=[wi,...,wn] sind die Integrationsgewichte, sodass fuer jedes j
-%                             wi(j) zu ti(j) gehört.
+%                             wi(j) zu ti(j) gehoert.
 function wi = compute_weights (ti)
   n = length(ti);
 

@@ -1,7 +1,5 @@
 % (a): Skript s. 132
-% minimale Fehlerreduktion |||M(omega)|||>0, da M(omega)=I-omega*A...
-% L >= 1 - opnorm(A/sqrt(lambdamax(AA'))) soll>0 iff 2. term < 1
-% opnorm(A/sqrt(la(AA'))=opnorm(A)/la(AA')=la(A)/la(AA')<1
+
 clc;
 disp('Aufgabe (b)');
 f = @(x) 0;
@@ -9,11 +7,9 @@ for n=1:10
   f = @(x) f(x) + x.^n;
   [x,y] = generateData(n+1,f);
   [A,b] = leastSquareSystem(x',y',n);
-  format short e
-  [z,res] = richardsonNormal(A,b,1*e-5,30,1);
+  [z,res] = richardsonNormal(A,b,1e-5,30,1);
   disp('loesung = ');
   disp(z);
-  format short
   
   % fuer (d)
   fak = zeros(1,30);

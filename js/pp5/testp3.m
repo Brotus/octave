@@ -19,3 +19,18 @@ end
 ek(:,1)=1:n;
 disp('    k         err');
 disp(ek);
+
+% konvergenzverhalten
+
+ekquot = ek;
+for i = 1:(size(ekquot,1)-1)
+    ekquot(i,2)=ekquot(i+1,2)/ekquot(i,2);
+end
+disp(ekquot)
+% mindestens superlineare konvergenz
+
+for i = 1:(size(ekquot,1)-1)
+    ekquot(i,2)=ekquot(i+1,2)/ekquot(i,2)^2;
+end
+disp(ekquot)
+% sieht quadratisch aus

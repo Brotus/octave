@@ -2,7 +2,7 @@
 % Eingabe:    f ist die Funktion (function handle)
 %             a ist die linke Grenze
 %             b ist die rechte grenze
-%             ti sind die Stützstellen
+%             ti sind die Stuetzstellen
 %             wi sind die Integrationsgewichte
 % Ausgabe:    r ist der Wert des numerischen Integrals
 function r = quadrature (f,a,b,ti,wi)
