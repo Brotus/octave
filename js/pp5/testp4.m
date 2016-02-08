@@ -10,15 +10,15 @@ disp('steps');
 disp(xk');
 
 
-xsol=[0.171333648176476,0.021321814151372]; % laut WolframAlpha
+xsol=[0.171333648176476;0.021321814151372]; % laut WolframAlpha
 xsol2=[0.1739;0.0217]; % laut des Skriptes
 
 n=size(xk,2);
 ek=zeros(n,2);
 for i=1:n
-  ek(i,2)=norm(xsol2-xk(:,i));
+  ek(i,2)=norm(xsol-xk(:,i));
 end
 ek(:,1)=1:n;
 
-disp('    k         xk');
+disp('    k         err');
 disp(ek);

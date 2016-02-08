@@ -12,14 +12,16 @@ for i=1:n
 end
 ek(:,1)=1:n;
 
-disp('    k         xk');
+disp('    k         err');
 disp(ek);
+% lokal lineare Konvergenz
 
+
+f=@(x) (2*x+sqrt(x.^2+0.04)-1.55)^2+(2*x+sqrt(x.^2+0.16)-1.65)^2+(2*x+sqrt(x.^2+0.36)-1.80)^2;
 fxk=xk;
 for i = 1:n
   fxk(i)=f(xk(i));
 end
-f=@(x) (2*x+sqrt(x.^2+0.04)-1.55)^2+(2*x+sqrt(x.^2+0.16)-1.65)^2+(2*x+sqrt(x.^2+0.36)-1.80)^2;
 [X,Y]=fplot(f,[0,1]);
 
 %plot(X,Y,'-b',xk,fxk,'r.')

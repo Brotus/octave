@@ -7,9 +7,9 @@ disp(['secant solution = ', num2str(x2)]);
 
 x0=pi/2; % korrekte Loesung
 
-disp('new k         xk')
+disp('new k         err')
 disp([(1:length(xk1))',abs(xk1'-x0)]);
-disp('sec k         xk')
+disp('sec k         err')
 disp([(1:length(xk2))',abs(xk2'-x0)]);
 
 % Beide konvergieren schneller, als regulaFalsi. Das passt zu den theoretischen Aussagen,

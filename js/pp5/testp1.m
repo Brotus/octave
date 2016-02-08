@@ -10,9 +10,9 @@ disp(['regulaFalsi solution = ', num2str(x2)]);
 % Teilaufgabe b
 
 x0=pi/2; % die tatsaechliche Loesung
-disp('bis k         xk')
+disp('bis k         err')
 disp([(1:length(xk1))',abs(xk1'-x0)]);
-disp('reg k         xk')
+disp('reg k         err')
 disp([(1:length(xk2))',abs(xk2'-x0)]);
 
 % Teilaufgabe c
