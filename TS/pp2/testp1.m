@@ -33,7 +33,7 @@ for i = 1:length(h)
   simpson(i) = quadrature(f,a,b,tsim,wsim);
   fehlersim(i) = abs(richtig(i) - simpson(i));
   % eoc
-  if i != 1
+  if i ~= 1
     eocrec(i) = log(fehlerrec(i-1)/fehlerrec(i)) / log(h(i-1)/h(i));
     eoctra(i) = log(fehlertra(i-1)/fehlertra(i)) / log(h(i-1)/h(i));
     eocsim(i) = log(fehlersim(i-1)/fehlersim(i)) / log(h(i-1)/h(i));

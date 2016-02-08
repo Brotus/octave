@@ -13,7 +13,7 @@ end
 format short e
 Table = [[1:length(ak)].', err.']
 format short
-% Konvergiert lokal linear
+% Konvergiert linear
 
 f = @(x) (2*x+sqrt(x.^2+0.04) - 1.55).^2 + (2*x+sqrt(x.^2+0.16) - 1.65).^2 + (2*x+sqrt(x.^2+0.36) - 1.8).^2;
 x = [0:0.01:1];
