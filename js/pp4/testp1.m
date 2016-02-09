@@ -1,4 +1,4 @@
-clc
+clc;
 f=@(x) 1+x+x.^2;
 m=[2,5,10];
 n=[0,1,2];
@@ -25,3 +25,6 @@ for i=2:3
     disp(C\B);
   end
 end
+
+% die Loesungen [1;1;1] sind korrekt, denn sie sind die Koeffizienten des
+% Polynoms f

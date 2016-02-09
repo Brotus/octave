@@ -1,3 +1,4 @@
+clc;
 tol=1e-10;
 F=@(x) [6*x(1)-cos(x(1))-2*x(2);8*x(2)-x(1)*x(2)^2-sin(x(1))];
 DF=@(x) [6+sin(x(1)),-2;-x(2)^2-cos(x(1)),8-2*x(1)*x(2)];
@@ -22,6 +23,7 @@ disp(ek);
 
 % konvergenzverhalten
 
+% format long benoetigt
 ekquot = ek;
 for i = 1:(size(ekquot,1)-1)
     ekquot(i,2)=ekquot(i+1,2)/ekquot(i,2);

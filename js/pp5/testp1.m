@@ -1,3 +1,4 @@
+clc;
 % Teilaufgabe a
 
 a=1;b=2;f=@(x)cos(x);tol=1e-8;

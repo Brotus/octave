@@ -1,3 +1,4 @@
+clc;
 f=@(x) cos(2*pi*x);
 
 disp('Teilaufgabe (a)');
@@ -42,6 +43,8 @@ en(5)=sum(abs(f(g)-p4(g)).^2);
 en(6)=sum(abs(f(g)-p5(g)).^2);
 en(7)=sum(abs(f(g)-p6(g)).^2);
 en=en/m;
+disp('err');
+disp(en);
 figure
 semilogy(n,en,'*')
 % (1/10)-lineare konvergenz

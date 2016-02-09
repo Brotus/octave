@@ -1,4 +1,5 @@
-% Diese Funktion berechnet mittels summierter Quadratur numerisch das Integral von f ueber z.
+% Diese Funktion berechnet mittels summierter Quadratur numerisch das 
+%   Integral von f ueber z.
 % Eingabe:    f ist der function handle der Funktion, die integriert werden soll
 %             z=[z0,...,zm] ist eine Zerlegung des Intervals in Teilintervalle
 %             ti ist ein Vektor der Stuetzstellen fuer die Quadratur

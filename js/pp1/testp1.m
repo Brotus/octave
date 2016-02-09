@@ -1,3 +1,4 @@
+clc;
 % Komplexitaet von eval_newton_poly:
 % Sei n die Laenge von ci und m die Laenge von x. Zaehlt man nur Multiplikationen und Divisionen,
 % so betraegt die Komplexitaet in der Eingabe

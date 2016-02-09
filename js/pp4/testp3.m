@@ -32,7 +32,7 @@ format short e
 disp(['n','   ','condNG','   ','condQR','   ','errNG','   ','errQR']);
 disp([(0:10)',condNG,condQR,errNG,errQR]);
 
-% Bei groesserem n steigt die kondition. Der Datenfehler wird also
+% Bei groesserem n steigt die Kondition. Der Datenfehler wird also
 % zunehmend verstaerkt.
-% Der Fehler in den koeffizientenvektoren steiget wegen schlechterer
+% Der Fehler in den Koeffizientenvektoren steiget wegen schlechterer
 % Konditionierung.

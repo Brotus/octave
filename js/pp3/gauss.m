@@ -8,25 +8,29 @@
 
 function [R,y]=gauss(A,b)
   n = size(A,1);
+  % bool ist true iff die rechte seite nicht [] ist.
   bool = size(b,2)>=1;
+  % zaehlt die Vertauschungen
   counter = 0;
   
   for j=1:n
     % groessten Eintrag der j-ten Zeile
-    [m,i]=max(abs(A(j:n,j))); i = i+j-1;
+    [~,i]=max(abs(A(j:n,j))); i = i+j-1;
     
     % Zeilen i und j von A vertauschen
     if(i~=j)
       %for k=j:n
       %  tmp = A(i,k); A(i,k)=A(j,k); A(j,k)=tmp;
       %endfor
+      % schliesslich ist das MATLAB!
       tmp = A(i,:); A(i,:)=A(j,:); A(j,:)=tmp;                                                      
       if(~bool)
         counter = counter + 1;
       end
     end
     
-    % Zeilen von b 
+    % Zeilen von b
+    % muessen nur vertauscht werden wenn die rechte Seite existiert
     if(bool)
       tmp=b(i,:); b(i,:)=b(j,:);b(j,:)=tmp;
     end
@@ -37,6 +41,8 @@ function [R,y]=gauss(A,b)
       for k=j:n
         A(i,k)=A(i,k)-lij*A(j,k);
       end
+      % fuer die rechte seite nur, wenn sie existiert
+      % beim erzeugen der 0en werden keine Zeilen vertauscht
       if(bool)
         b(i,:)=b(i,:)-lij.*b(j,:);
       end

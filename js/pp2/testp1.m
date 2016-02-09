@@ -34,3 +34,5 @@ disp('fehler & eoc');
 disp('eoc == -1 means undefined')
 disp(['h','         ','rec','       ','rec eoc','   ','tra','       ','tra eoc','   ','sim','       ','sim eoc']);
 disp(num2str(tab,'%10f'));
+
+% Die eocs von 2,3,5 stimmen mit denen aus der Vorlesung ueberein.

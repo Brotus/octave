@@ -7,6 +7,7 @@ function m = determine_exactness_order (ti,wi)
   m = 0;
   while 1
     f = @(x) x^m;
+    % Bedingung S. 50
     err = abs(quadrature(f,0,1,ti,wi)-1/(m+1));
     if (err >= eps)
       break;
