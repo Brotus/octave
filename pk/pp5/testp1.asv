@@ -15,8 +15,7 @@ disp('RegulaFalsi')
 for i=1:length(xk)
   errRF(i) = abs(xk(i)-lsg);
 end
-% Aufgrund der Konvergenz der Verfahren kann gegebene Abschätzung erwartet
-% werden.
+% Aufgrund der Konvergenz der Verfahren kann gegebene Abschätzung erwartet werden
 
 % b)
 disp('b) bisection k | Fehler')
@@ -24,8 +23,5 @@ disp('b) bisection k | Fehler')
 disp('b) regula falsi k | Fehler')
 [[1:length(errRF)]' errRF']
 
-% c): Regula Falsi konvergiert besser als Bisection (aber immernoch linear),
-% aber schlechter als Newton (quadratisch).
-
-%figure
-%semilogy(1:length(errBi),errBi,1:length(errRF),errRF)
+% c): Regula Falsi konvergiert besser als Bisection (r-linear),
+aber schlechter als Newton (quadratisch).

@@ -16,5 +16,5 @@ Tab2 = [(1:length(xk2))',abs(xk2'-x0)]
 % Das Sekantenverfahren konvergiert superlinear, Newton konvergiert
 % quadratisch, man sieht dass Newton schneller konvergiert.
 %figure
-%itrvl = [1:4]
-%loglog(Tab1(itrvl,1),Tab1(itrvl,2),'.-',Tab2(itrvl,1),Tab2(itrvl,2))
+%itrvl = [1:4];
+%semilogy(Tab1(itrvl,1),Tab1(itrvl,2),'.-',Tab2(itrvl,1),Tab2(itrvl,2))
