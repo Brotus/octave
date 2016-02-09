@@ -1,12 +1,13 @@
+clc;
 % Komplexitaet von eval_monom_poly:
 % Ist n die Laenge von ai und m die von x und zaehlt man nur die Multiplikationen und Divisionen, so ist die Komplexität
 % #(ops) = O(m*n)
 % Das Horner-Schema für einen Wert arbeitet in O(n). Es wird m mal angewandt.
 
 % Initialisierung der Ausgangsdaten
-x = [0:0.1:5];
-ci1=[1];ci2=[1,2];ci3=[1,3,4];
-xi1=[0];xi2=[0,1];xi3=0:2;
+x = 0:0.1:5;
+ci1=1;ci2=[1,2];ci3=[1,3,4];
+xi1=0;xi2=[0,1];xi3=0:2;
 
 % Speichern der Koeffizienten der Monom-Darstellung
 ai1=newton_to_monomial(ci1,xi1);
@@ -27,6 +28,8 @@ y3m=eval_monom_poly(ai3,x);
 disp('exact?');
 disp(norm(y1n-y1m,inf)+norm(y2n-y2m,inf)+norm(y3n-y3m,inf) < 1e-13);
 
+% Der Fehler ist kleiner als 10^(-13)
+
 % Grafischer Vergleich
 subplot(3,1,1)
 plot(x,y1n,'-b',x,y1m,'or')
@@ -34,3 +37,5 @@ subplot(3,1,2)
 plot(x,y2n,'-b',x,y2m,'or')
 subplot(3,1,3)
 plot(x,y3n,'-b',x,y3m,'or')
+
+% Die Graphen sind gleich.

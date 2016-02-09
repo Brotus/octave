@@ -1,5 +1,6 @@
-% Komplexität von compute_newton_poly:
-% Ist m die Länge der Eingabevektoren und zaehlt man nur Multiplikationen und Divisionen, so erhält man den Aufwand
+clc;
+% Komplexitaet von compute_newton_poly:
+% Ist m die Laenge der Eingabevektoren und zaehlt man nur Multiplikationen und Divisionen, so erhaelt man den Aufwand
 % #(ops) = (m-1)*O(m)*O(1) = O(m^2).
 
 % Initialisierung der Ausgangsdaten
@@ -20,3 +21,5 @@ ci3H=[1,1,-1];
 disp('arrays are equal:');
 % (c1==ci1H)&&(c2==ci2H)&&(c3==ci3H)% Octave
 disp(isequal(c1,ci1H) & isequal(c2,ci2H) & isequal(c3,ci3H)); % Matlab
+
+% Da 1 ausgegeben wird, sind die Koeffizienten korrekt berechnet worden.

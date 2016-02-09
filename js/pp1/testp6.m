@@ -2,9 +2,10 @@ z=0:0.1:5;
 xi=0:5;
 % y der Lagrange-Polynome
 y=eye(6);
-newtonci=zeros(6,6);
+newtonci=zeros(6);
 newtonxi=newtonci;
 
+% l_j(x_j)=1, l_j(x_i)=0 fuer i~=j
 for j=0:5
 	[newtonci(j+1,:), newtonxi(j+1,:)] = compute_newton_poly(xi,y(j+1,:));
 end
