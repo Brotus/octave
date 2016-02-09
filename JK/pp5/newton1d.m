@@ -1,3 +1,14 @@
+% Berechnet eine Nullstelle mit dem Newtonverfahren
+% Eingabe:  f..... Funktion
+%           df.... Ableitung
+%           x0.... Startwert
+%           tol... Abbruchstoleranz
+%           maxit. Maximale Anzahl an Iterationen
+% Ausgabe:  x..... Approximation
+%           xk.... Vektor aller Approximationen
+xk = [];
+
+
 function [x ,xk] = newton1d(f, df, x0, tol, maxit)
 	
 x = x0;

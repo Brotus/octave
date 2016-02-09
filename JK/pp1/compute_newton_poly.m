@@ -8,7 +8,7 @@
 
 function [ci, xi] = compute_newton_poly (xi, yi)
 
-m=length(x);
+m=length(xi);
 ci = yi;
 for i=1:m-1
 	for j=m:-1:i+1

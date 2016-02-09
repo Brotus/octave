@@ -1,3 +1,13 @@
+% Berechnet Lösung des Gauss-Newton-Verfahren
+% Eingabe:  F..... Funktion
+%           DF.... Jacobimatrix
+%           x0.... Startvektor
+%           tol... Abbruchstoleranz
+%           maxit. Maximale Anzahl an Iterationen
+% Ausgabe:  x..... Approximation
+%           xk.... Matrix aller Approximationen
+
+
 function [x, xk] = gaussNewton(F, DF, x0, tol, maxit)
 
 x = x0;

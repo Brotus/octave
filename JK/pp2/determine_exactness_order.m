@@ -1,9 +1,14 @@
+%Eingabe
+%			ti = Stuetzstellen
+%			wi = Integrationsgewichte
+%Ausgabe
+%			m = Exaktheitsgrad
+
+
 function m = determine_exactness_order (ti,wi)
-	m = 0;
-	f = @(x) x^m;
-	
-	while(abs(quadrature(f, 0, 1, ti, wi)-quad(f, 0,1)) < 1e-13 )
-		m = m+1;
-	end
-	m = m-1;
+	j = 0;
+while abs(quadrature(@(x) x^j,0,1,ti,wi) - 1/(j+1)) < 1e-12
+  j = j + 1;
+end
+m = j-1;
 end

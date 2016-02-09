@@ -1,3 +1,9 @@
+%Eingabe
+%			A = Matrix
+%Ausgabe
+%			d = determinante von A
+
+
 function d = determinant (A)
 
 d = 1;

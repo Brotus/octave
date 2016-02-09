@@ -1,3 +1,11 @@
+% Berechnet eine Approximation der Nullstelle von f
+% Eingabe:  f.... Funktion
+%           a,b.. Intervallgrenzen mit a < b und f(a)*f(b) < 0
+%           tol.. Toleranz zum Abbruch
+% Ausgabe:  x.... Approximation
+%           xk... Vektor aller Approximationen
+
+
 function [x, xk] = bisection(f,a,b,tol)
 
 i = 1;

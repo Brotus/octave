@@ -9,6 +9,6 @@ A=[]; y=[];
     end
     y(i)=1/i;
   end
-wi=A\y.';
+wi = A\y.';
 wi=wi.';
 end
