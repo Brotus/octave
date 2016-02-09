@@ -1,3 +1,4 @@
+clc;
 x0=2; f=@(x)cos(x); df=@(x) -sin(x); tol=1e-8; maxit=20;
 
 [x1,xk1]=newton1d(f,df,x0,tol,maxit);

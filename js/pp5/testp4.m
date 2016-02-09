@@ -1,3 +1,4 @@
+clc;
 tol=1e-10;
 x0=[0;0];
 phi=@(x) [(cos(x(1))+2*x(2))/6;(x(1)*x(2)^2+sin(x(1)))/8];
@@ -24,11 +25,11 @@ disp('    k         err');
 disp(ek);
 
 % Konvergenzverhalten
-
+% format long benoetigt
 
 ekquot = ek;
 for i = 1:(size(ekquot,1)-1)
     ekquot(i,2)=ekquot(i+1,2)/ekquot(i,2);
 end
 disp(ekquot)
-% lineare konvergenz da ungefähr konstant
+% lineare Konvergenz da ungefähr konstant
