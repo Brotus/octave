@@ -7,13 +7,13 @@ function wi = compute_weights (ti)
   n = length(ti);
 
   m = ones(n,1);
+  % m(i)=integral(x^(i-1),ti(1),ti(n))
   for i = 1:n
     m(i) = (ti(n)^i-ti(1)^i)/i;
   end
-  
-  % m = 1/(1:n);
 
   x = ones(n,n);
+  % siehe Polynominterpolation in Monomdarstellung
   for i = 2:n
     x(i,:)=ti.^(i-1);
   end

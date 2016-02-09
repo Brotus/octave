@@ -1,4 +1,5 @@
-% Diese Funktion berechnet numerisch mittels linearer Quadratur das  Integral von f im Interval [a,b].
+% Diese Funktion berechnet numerisch mittels linearer Quadratur das 
+%   Integral von f im Interval [a,b].
 % Eingabe:    f ist die Funktion (function handle)
 %             a ist die linke Grenze
 %             b ist die rechte grenze

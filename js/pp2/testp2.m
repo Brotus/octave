@@ -2,7 +2,7 @@ f=@(x) exp(x);
 sums = zeros(6,3);
 err = sums;
 eoc = -1*ones(6,3);
-h=2.^(-[0:5]);
+h=2.^(-(0:5));
 % Teilaufgabe a
 for l=0:5
 	hl=h(l+1);
@@ -50,4 +50,4 @@ ylabel('Fehler')
 legend('Rechteckregel', 'Trapezregel', 'Simpsonregel', 'Location', 'northoutside')
 
 
-% Die Steigung der Gerade ist die Konvergenzrate.
+% Die Steigung der Gerade ist die Konvergenzrate. (1,2,4)
