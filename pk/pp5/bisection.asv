@@ -1,0 +1,17 @@
+function [x,xk]=bisection(f,a,b,tol)
+% Eingabe:  f ... function handle
+%           a, b ... Intervallgrenzen
+%           tol ... Schranke fuer Abbruch
+% Ausgabe:  x ... Naeherung fuer Loesung von f(x)=0
+%           xk ... Vektro aller Approximationen
+x = .5*(a+b);
+xk = x;
+while b-a) > tol
+    if f(x) > 0
+        b = x;
+    else
+        a = x;
+    end
+    x = .5*(a+b);
+    xk = [xk, x];
+end
